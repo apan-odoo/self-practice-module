@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- ________________________Actions__________________________________ -->
+    <record id="hospitality_reservation_action" model="ir.actions.act_window">
+        <field name="name">Reservations</field>
+        <field name="res_model">hospitality.reservation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Records Found!!!! Please create a new record.
+            </p>
+        </field>
+    </record>
+
+    <!-- ________________________Tree View__________________________________ -->
+    <record id="reservation_view_tree" model="ir.ui.view">
+        <field name="name">reservation.tree</field>
+        <field name="model">hospitality.reservation</field>
+        <field name="arch" type="xml">
+            <tree string="Reservations">
+                <field name="booking_name" />
+                <!-- <field name="booking_id" /> -->
+                <field name="check_in" />
+                <field name="check_out" />
+                <field name="no_of_person" />
+                <field name="meal" />
+                <field name="net_amount" />
+                <field name="amount_paid" />
+                <field name="balance" />
+                <field name="company" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- _____________________________Form__________________________ -->
+
+    <record id="reservation_view_form" model="ir.ui.view">
+        <field name="name">reservation.form</field>
+        <field name="model">hospitality.reservation</field>
+        <field name="arch" type="xml">
+            <form string="Reservations">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="booking_name" />
+                            <!-- <field name="booking_id" /> -->
+                            <field name="check_in" />
+                            <field name="check_out" />
+                            <field name="no_of_person" />
+                            <field name="meal" />
+                            <field name="extra_services_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                        </group>
+                        <group>
+                            <field name="net_amount" />
+                            <field name="amount_paid" />
+                            <field name="balance" />
+                            <field name="company" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
