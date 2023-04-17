@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- root -->
+    <menuitem
+        id="reservation_menu_root"
+        name="Reservation"
+        web_icon="reservation,static/description/logo.png" />
+
+    <!-- Reservation -->
+    <menuitem
+        id="reservation_menu_reservations"
+        name="Reservations"
+        parent="reservation_menu_root" />
+
+    <menuitem
+        id="reservation_menu_reservations_bookings"
+        name="Bookings"
+        parent="reservation_menu_reservations"
+        action="reservation_action" />
+
+
+    <!-- Settings -->
+    <menuitem
+        id="reservation_menu_setting"
+        name="Services"
+        parent="reservation_menu_root" />
+
+    <menuitem
+        id="menu_room_type"
+        name="Room Types"
+        parent="reservation_menu_setting"
+        action="room_type_action" />
+
+    <menuitem
+        id="menu_hotel"
+        name="Hotels"
+        parent="reservation_menu_setting"
+        action="hotel_action" />
+
+    <menuitem
+        id="menu_extra_service"
+        name="Extra Services"
+        parent="reservation_menu_setting"
+        action="extra_service_action" />
+
+</odoo>

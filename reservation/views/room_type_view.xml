@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- ________________________Actions__________________________________ -->
+    <record id="room_type_action" model="ir.actions.act_window">
+        <field name="name">Room Types</field>
+        <field name="res_model">room.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Records Found!!!! Please create a new record.
+            </p>
+        </field>
+    </record>
+
+    <!-- ________________________Tree View__________________________________ -->
+    <record id="room_type_tree" model="ir.ui.view">
+        <field name="name">room.type.tree</field>
+        <field name="model">room.type</field>
+        <field name="arch" type="xml">
+            <tree string="Room Types">
+                <!-- <field name="sequence" widget="handle"/> -->
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+</odoo>

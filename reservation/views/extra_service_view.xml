@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- _____________________Action___________________ -->
+    <record id="extra_service_action" model="ir.actions.act_window">
+        <field name="name">Extra Services</field>
+        <field name="res_model">extra.service</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Records Found!!!!  Please create a new record
+            </p>
+        </field>
+    </record>
+
+    <!-- ____________________________tree view___________________ -->
+    <record id="extra_service_view_tree" model="ir.ui.view">
+        <field name="name">extra.service.tree</field>
+        <field name="model">extra.service</field>
+        <field name="arch" type="xml">
+            <tree string="Extra Services" editable='bottom'>
+                <field name="name"/>
+                <field name="color"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

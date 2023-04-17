@@ -1,7 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hospitality_hotel,access_hospitality_hotel,model_hospitality_hotel,base.group_user,1,1,1,1
-access_hospitality_guest,access_hospitality_guest,model_hospitality_guest,base.group_user,1,1,1,1
-access_hospitality_reservation,access_hospitality_reservation,model_hospitality_reservation,base.group_user,1,1,1,1
-access_hospitality_room,access_hospitality_room,model_hospitality_room,base.group_user,1,1,1,1
-access_hotel_staff,access_hotel_staff,model_hotel_staff,base.group_user,1,1,1,1
-access_room_service,access_room_service,model_room_service,base.group_user,1,1,1,1
