@@ -18,9 +18,44 @@
         <field name="model">hotel</field>
         <field name="arch" type="xml">
             <tree string="Hotels">
-                <!-- <field name="sequence" widget="handle"/> -->
+                <field name="sequence" widget="handle"/>
                 <field name="name" />
+                <field name="review" widget="priority"/>
             </tree>
         </field>
     </record>
+
+    <!-- ____________________________Form view________________________________________ -->
+    <record id="room_form" model="ir.ui.view">
+        <field name="name">hotel.form</field>
+        <field name="model">hotel</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="%(reservation_action)d" type="action" icon="fa-money">
+                            <div class="o_stat_info">
+                                <!-- <span class="o_stat_value">
+                                    <field name="offer_count"/>
+                                </span> -->
+                                <span class="o_stat_text">
+                                    Reservations
+                                </span>
+                            </div>
+                        </button>
+                    </div>
+                    <h1>
+                        <field name="name" />
+                    </h1>
+                    <field name="review" widget="priority"/>
+                    <notebook>
+                        <page string="Rooms Info">
+                            <field name="room_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
 </odoo>
