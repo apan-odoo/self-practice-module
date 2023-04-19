@@ -52,7 +52,7 @@ class ReservationMain(models.Model):
     hotel_id = fields.Many2one('hotel', string="Hotel")
     extra_services_ids = fields.Many2many('extra.service')
     agent = fields.Many2one('res.users', default=lambda self: self.env.user)
-    hotel_address = fields.Char(related="hotel_id.address")
+    hotel_address = fields.Char(related="hotel_id.add")
     hotel_review = fields.Selection(related="hotel_id.review")
 
     @api.depends('net_amount', 'amount_paid')
@@ -93,3 +93,9 @@ class ReservationMain(models.Model):
                 raise UserError('Checked out reservation cannot be canceled')
             else:
                 record.state = 'canceled'
+
+    @api.ondelete(at_uninstall=False)
+    def _on_delete_action(self):
+        for record in self:
+            if record.state in ['checked_in', 'checked_out']:
+                raise UserError("Only new and canceled reservation can be deleted.")

@@ -10,9 +10,10 @@
     'data': [
         'security/ir.model.access.csv',
         'views/room_type_view.xml',
+        'views/reservation_view.xml',
         'views/hotel_view.xml',
         'views/extra_service_view.xml',
-        'views/reservation_view.xml',
+        
         'views/menu.xml',
     ],
     # data files containing optionally loaded demonstration data

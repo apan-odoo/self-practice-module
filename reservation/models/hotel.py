@@ -7,7 +7,7 @@ class Hotel(models.Model):
     _order = "sequence, name"
 
     name = fields.Char(required=True)
-    address = fields.Char()
+    add = fields.Char()
     contact = fields.Char()
     review = fields.Selection(
         selection=[('no','no review'),

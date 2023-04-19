@@ -33,11 +33,11 @@
             <form>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
-                        <button class="oe_stat_button" name="%(reservation_action)d" type="action" icon="fa-money">
+                        <button class="oe_stat_button" name="%(reservation_action_stat)d" type="action" icon="fa-money">
                             <div class="o_stat_info">
-                                <!-- <span class="o_stat_value">
-                                    <field name="offer_count"/>
-                                </span> -->
+                                <span class="o_stat_value">
+                                    <field name="reservation_count"/>
+                                </span>
                                 <span class="o_stat_text">
                                     Reservations
                                 </span>
@@ -50,7 +50,7 @@
                     <field name="review" widget="priority"/>
                     <notebook>
                         <page string="Rooms Info">
-                            <field name="room_ids"/>
+                            <!-- <field name="room_ids"/> -->
                         </page>
                     </notebook>
                 </sheet>

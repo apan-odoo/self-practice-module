@@ -4,7 +4,19 @@
     <record id="reservation_action" model="ir.actions.act_window">
         <field name="name">Reservations</field>
         <field name="res_model">reservation.main</field>
-        <field name="domain">[('room_type_id', '=', active_id)]</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Records Found!!!! Please create a new record.
+            </p>
+        </field>
+    </record>
+
+    <!-- _______________________action for stat button________________ -->
+    <record id="reservation_action_stat" model="ir.actions.act_window">
+        <field name="name">Reservations</field>
+        <field name="res_model">reservation.main</field>
+        <field name="domain">[('hotel_id', '=', active_id)]</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
