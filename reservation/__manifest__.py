@@ -13,8 +13,8 @@
         'views/reservation_view.xml',
         'views/hotel_view.xml',
         'views/extra_service_view.xml',
-        
         'views/menu.xml',
+        'views/res_users_view.xml'
     ],
     # data files containing optionally loaded demonstration data
     'demo': [
